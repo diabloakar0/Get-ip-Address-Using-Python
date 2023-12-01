@@ -11,7 +11,7 @@ install python 3.10
 ### Installation
 Your need some library
 ```
-pip install socket, time, speedtest, speedtest-cli
+pip install time, speedtest, speedtest-cli
 ```
 ## How to install? (Step by step with Screenshots)
 
