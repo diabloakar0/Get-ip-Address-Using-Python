@@ -19,7 +19,24 @@ import sys
 import threading
 import timeit
 import xml.parsers.expat
+import requests
 ##############################
+
+def get_public_ip():
+    try:
+        response = requests.get('https://api64.ipify.org?format=json')
+        data = response.json()
+        return data['ip']
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+internet_ip = get_public_ip()
+
+if internet_ip:
+    print(f"Internet IP Address: {internet_ip}")
+else:
+    print("Failed to retrieve Internet IP address.")
 
 
 hostname = socket.gethostname() 
